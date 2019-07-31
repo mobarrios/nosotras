@@ -37,6 +37,8 @@
     .content-wrapper, .right-side{
         min-height: 84vh;
     }
+
+}   
 </style>
 
 

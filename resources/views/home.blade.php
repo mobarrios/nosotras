@@ -20,19 +20,19 @@
                             <label class=" label label-primary"> {{$rol->slug}}</label>
                         @endforeach
                     </p>
-                    <span >
+                    {{-- <span >
                         <span class="text-muted">Sucursales : </span>
                       @foreach(\Illuminate\Support\Facades\Auth::user()->brancheables as $branch)
                         <label class=" label label-default">{{$branch->branches->name}}</label>
                       @endforeach
-                    </span>
+                    </span> --}}
 
                 </div>
 
             </div>
         </div>
 
-        <div class="col-sm-3 col-xs-12">
+ {{--        <div class="col-sm-3 col-xs-12">
             <!-- small box -->
             <div class="small-box bg-aqua">
                 <div class="inner">
@@ -82,7 +82,7 @@
                 </div>
                 <a href="{{route('admin.models.index')}}" class="small-box-footer">ir a Lista  <i class="fa fa-arrow-circle-right"></i></a>
             </div>
-        </div>
+        </div> --}}
 
 
     </div>

@@ -3,10 +3,11 @@
     <a href="" class="logo">
 
 
-        <!-- mini logo for sidebar mini 50x50 pixels -->
+NOS.OTRAS
+
+       {{--  <!-- mini logo for sidebar mini 50x50 pixels -->
         <span class="logo-mini">
             <span class="fa-stack fa-xs">
-
                 @if(auth()->user()->branchesActive->company->images->count() > 0)
                     <img src="{!! auth()->user()->branchesActive->company->images->first()->path !!}" alt="logo" class="img-responsive">
                 @endif
@@ -26,7 +27,7 @@
                 <span>{!! auth()->user()->branchesActive->company->nombre_fantasia !!}</span>
 
         </span>
-
+ --}}
     </a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
@@ -47,7 +48,7 @@
                         <span class="hidden-xs">{{\Illuminate\Support\Facades\Auth::user()->email}}</span>
                     </a>
                 </li>
-                <li class="dropdown">
+                {{-- <li class="dropdown">
                     <a class="dropdown-toggle text-black" data-toggle="dropdown" href="#" aria-expanded="false">
                         <span class="fa fa-building"></span>
                         {{\Illuminate\Support\Facades\Auth::user()->BranchesActive->name}}
@@ -58,7 +59,7 @@
                             <li role="presentation"><a  class="text-sm" role="menuitem" tabindex="-1" href="{{route('configs.users.changeBranch',$branch->Branches->id)}}"> {{$branch->Branches->name}} </a></li>
                         @endforeach
                     </ul>
-                </li>
+                </li> --}}
 
 
 
