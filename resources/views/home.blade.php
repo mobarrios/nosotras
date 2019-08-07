@@ -6,7 +6,7 @@
 
 
         <!-- Default box -->
-        <div class="col-xs-12 col-sm-3">
+   {{--      <div class="col-xs-12 col-sm-3">
             <div class="box box-primary">
                 <div class="box-body box-profile">
                     <img class="profile-user-img img-responsive img-circle" src="{!! Auth::user()->images ? Auth::user()->images->path : "vendors/LTE/dist/img/avatar5.png"!!}" alt="User profile picture">
@@ -20,69 +20,140 @@
                             <label class=" label label-primary"> {{$rol->slug}}</label>
                         @endforeach
                     </p>
-                    {{-- <span >
+                    <span >
                         <span class="text-muted">Sucursales : </span>
                       @foreach(\Illuminate\Support\Facades\Auth::user()->brancheables as $branch)
                         <label class=" label label-default">{{$branch->branches->name}}</label>
                       @endforeach
-                    </span> --}}
+                    </span>
 
                 </div>
 
             </div>
-        </div>
+        </div> --}}
 
- {{--        <div class="col-sm-3 col-xs-12">
-            <!-- small box -->
-            <div class="small-box bg-aqua">
-                <div class="inner">
-                    <h3>{{\App\Entities\Admin\Budgets::all()->count()}}</h3>
-                    <p>Presupuestos</p>
-                </div>
-                <div class="icon">
-                    <i class="ion ion-android-bookmark"></i>
-                </div>
-            </div>
-            <div class="box-footer">
-                {!! Form::open(['route'=>('admin.budgets.index'),'method'=>'GET']) !!}
-                    <div class="input-group">
-                        <input name="search" placeholder="Buscar Presupuesto..." class="form-control" type="text">
-                        <input  type="hidden" name="filter[]" value="id">
-                          <span class="input-group-btn">
-                            <button type="submit" class="btn bg-aqua btn-flat"><span class="fa fa-search"></span></button>
-                          </span>
-                    </div>
-                {!! Form::close() !!}
-            </div>
-        </div>
+         
 
         <div class="col-sm-3 col-xs-12">
             <!-- small box -->
             <div class="small-box bg-red-active">
                 <div class="inner">
-                    <h3>{{\App\Entities\Admin\Sales::all()->count()}}</h3>
-                    <p>Ventas</p>
+                    <h3>250</h3>
+                    <p>Usuarios Registrados.</p>
                 </div>
                 <div class="icon">
-                    <i class="ion ion-bag"></i>
+                    <i class="ion ion-person"></i>
                 </div>
-                <a href="{{route('admin.sales.create')}}" class="small-box-footer">Nueva Venta <i class="fa fa-arrow-circle-right"></i></a>
-            </div>
+{{--                 <a href="{{route('admin.sales.create')}}" class="small-box-footer">Nueva Venta <i class="fa fa-arrow-circle-right"></i></a>
+ --}}       </div>
         </div>
 
         <div class="col-sm-3 col-xs-12">
             <!-- small box -->
             <div class="small-box bg-orange ">
                 <div class="inner">
-                    <h3>{{\App\Entities\Admin\Models::all()->count()}}</h3>
-                    <p>Lista de Precios</p>
+                    <h3>450</h3>
+                    <p>Total de  Consultas</p>
                 </div>
                 <div class="icon">
-                    <i class="fa fa-shopping-cart"></i>
+                    <i class="fa fa-comment"></i>
                 </div>
-                <a href="{{route('admin.models.index')}}" class="small-box-footer">ir a Lista  <i class="fa fa-arrow-circle-right"></i></a>
             </div>
-        </div> --}}
+
+                  <p class="text-center">
+                    <strong>Consultas por Estados</strong>
+                  </p>
+
+                  <div class="progress-group">
+                    <span class="progress-text">Pendiente</span>
+                    <span class="progress-number"><b>160</b>/450</span>
+
+                    <div class="progress sm">
+                      <div class="progress-bar progress-bar-aqua" style="width: 16%"></div>
+                    </div>
+                  </div>
+                  <!-- /.progress-group -->
+                  <div class="progress-group">
+                    <span class="progress-text">En proceso</span>
+                    <span class="progress-number"><b>310</b>/450</span>
+
+                    <div class="progress sm">
+                      <div class="progress-bar progress-bar-red" style="width: 31%"></div>
+                    </div>
+                  </div>
+                  <!-- /.progress-group -->
+                  <div class="progress-group">
+                    <span class="progress-text">Resuelto</span>
+                    <span class="progress-number"><b>480</b>/450</span>
+
+                    <div class="progress sm">
+                      <div class="progress-bar progress-bar-green" style="width: 48%"></div>
+                    </div>
+                  </div>
+                  <!-- /.progress-group -->
+                  <div class="progress-group">
+                    <span class="progress-text">Derivado</span>
+                    <span class="progress-number"><b>250</b>/450</span>
+
+                    <div class="progress sm">
+                      <div class="progress-bar progress-bar-yellow" style="width: 25%"></div>
+                    </div>
+                  </div>
+
+                  <div class="progress-group">
+                    <span class="progress-text">No aplica</span>
+                    <span class="progress-number"><b>260</b>/450</span>
+
+                    <div class="progress sm">
+                      <div class="progress-bar progress-bar-secondary" style="width: 26%"></div>
+                    </div>
+                  </div>
+                  <!-- /.progress-group -->
+
+                  <p class="text-center">
+                    <strong>Consultas por Temáticas</strong>
+                  </p>
+
+                  <div class="progress-group">
+                    <span class="progress-text">Salud</span>
+                    <span class="progress-number"><b>160</b>/450</span>
+
+                    <div class="progress sm">
+                      <div class="progress-bar progress-bar-aqua" style="width: 36%"></div>
+                    </div>
+                  </div>
+                  <!-- /.progress-group -->
+                  <div class="progress-group">
+                    <span class="progress-text">Educación</span>
+                    <span class="progress-number"><b>310</b>/450</span>
+
+                    <div class="progress sm">
+                      <div class="progress-bar progress-bar-red" style="width: 51%"></div>
+                    </div>
+                  </div>
+                  <!-- /.progress-group -->
+                  <div class="progress-group">
+                    <span class="progress-text">Asesoramiento Legal</span>
+                    <span class="progress-number"><b>480</b>/450</span>
+
+                    <div class="progress sm">
+                      <div class="progress-bar progress-bar-green" style="width: 78%"></div>
+                    </div>
+                  </div>
+                  <!-- /.progress-group -->
+                  <div class="progress-group">
+                    <span class="progress-text">Otros</span>
+                    <span class="progress-number"><b>250</b>/450</span>
+
+                    <div class="progress sm">
+                      <div class="progress-bar progress-bar-yellow" style="width: 55%"></div>
+                    </div>
+                  </div>
+
+                 
+        </div> 
+
+        
 
 
     </div>
