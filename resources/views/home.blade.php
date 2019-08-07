@@ -66,7 +66,7 @@
 
                   <div class="progress-group">
                     <span class="progress-text">Pendiente</span>
-                    <span class="progress-number"><b>160</b>/450</span>
+                    <span class="progress-number"><b>60</b>/450</span>
 
                     <div class="progress sm">
                       <div class="progress-bar progress-bar-aqua" style="width: 16%"></div>
@@ -75,7 +75,7 @@
                   <!-- /.progress-group -->
                   <div class="progress-group">
                     <span class="progress-text">En proceso</span>
-                    <span class="progress-number"><b>310</b>/450</span>
+                    <span class="progress-number"><b>100</b>/450</span>
 
                     <div class="progress sm">
                       <div class="progress-bar progress-bar-red" style="width: 31%"></div>
@@ -84,7 +84,7 @@
                   <!-- /.progress-group -->
                   <div class="progress-group">
                     <span class="progress-text">Resuelto</span>
-                    <span class="progress-number"><b>480</b>/450</span>
+                    <span class="progress-number"><b>140</b>/450</span>
 
                     <div class="progress sm">
                       <div class="progress-bar progress-bar-green" style="width: 48%"></div>
@@ -93,7 +93,7 @@
                   <!-- /.progress-group -->
                   <div class="progress-group">
                     <span class="progress-text">Derivado</span>
-                    <span class="progress-number"><b>250</b>/450</span>
+                    <span class="progress-number"><b>70</b>/450</span>
 
                     <div class="progress sm">
                       <div class="progress-bar progress-bar-yellow" style="width: 25%"></div>
@@ -102,7 +102,7 @@
 
                   <div class="progress-group">
                     <span class="progress-text">No aplica</span>
-                    <span class="progress-number"><b>260</b>/450</span>
+                    <span class="progress-number"><b>80</b>/450</span>
 
                     <div class="progress sm">
                       <div class="progress-bar progress-bar-secondary" style="width: 26%"></div>
@@ -116,7 +116,7 @@
 
                   <div class="progress-group">
                     <span class="progress-text">Salud</span>
-                    <span class="progress-number"><b>160</b>/450</span>
+                    <span class="progress-number"><b>60</b>/450</span>
 
                     <div class="progress sm">
                       <div class="progress-bar progress-bar-aqua" style="width: 36%"></div>
@@ -125,7 +125,7 @@
                   <!-- /.progress-group -->
                   <div class="progress-group">
                     <span class="progress-text">Educación</span>
-                    <span class="progress-number"><b>310</b>/450</span>
+                    <span class="progress-number"><b>80</b>/450</span>
 
                     <div class="progress sm">
                       <div class="progress-bar progress-bar-red" style="width: 51%"></div>
@@ -134,7 +134,7 @@
                   <!-- /.progress-group -->
                   <div class="progress-group">
                     <span class="progress-text">Asesoramiento Legal</span>
-                    <span class="progress-number"><b>480</b>/450</span>
+                    <span class="progress-number"><b>100</b>/450</span>
 
                     <div class="progress sm">
                       <div class="progress-bar progress-bar-green" style="width: 78%"></div>
@@ -143,7 +143,7 @@
                   <!-- /.progress-group -->
                   <div class="progress-group">
                     <span class="progress-text">Otros</span>
-                    <span class="progress-number"><b>250</b>/450</span>
+                    <span class="progress-number"><b>140</b>/450</span>
 
                     <div class="progress sm">
                       <div class="progress-bar progress-bar-yellow" style="width: 55%"></div>
