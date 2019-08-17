@@ -57,7 +57,7 @@ return [
 
     'validationsUpdate' => [
 
-        'titile'          => 'required',
+        'title'          => 'required',
         'address'     => 'required',
         'lat'     => 'required',
         'long'     => 'required',
