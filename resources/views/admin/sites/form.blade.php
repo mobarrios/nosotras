@@ -19,6 +19,11 @@
                 {!! Form::label('Dirección') !!}
                 {!! Form::text('address', null, ['class'=>'form-control']) !!}
               </div>
+
+              <div class="col-xs-12 form-group">
+                {!! Form::label('Tipo') !!}
+                {!! Form::select('sites_tipo_id', $tipos, null, ['class'=>'form-control']) !!}
+              </div>
               <div class="col-xs-6 form-group">
                 {!! Form::label('Latitud') !!}
                 {!! Form::text('lat', null, ['class'=>'form-control']) !!}

@@ -3,6 +3,10 @@
 
 
  Route::get('getSites', 'Api\ApiController@getSites');
+ Route::get('getSitesTipo','Api\ApiController@getSitesTipo');
+ Route::get('getConsultasTipo','Api\ApiController@getConsultasTipo');
+
+ Route::get('postConsulta/{tipo?}/{text?}','Api\ApiController@postConsulta');
 
 // Route::get('postUrl/{idOperativos?}/{idMesas?}/{imagen?}', 'Api\ApiController@postUrl');
 

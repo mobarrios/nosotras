@@ -7,6 +7,7 @@ use App\Http\Repositories\Admin\SitesRepo as Repo;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Route;
 
+use App\Entities\Admin\SitesTipo;
 
 class SitesController extends Controller
 {
@@ -19,6 +20,9 @@ class SitesController extends Controller
 
         $this->section          = 'sites';
         $this->data['section']  = $this->section;
+
+        $this->data['tipos'] = SitesTipo::lists('name','id');
+
 
     }
 

@@ -25,7 +25,7 @@
               </div>
               <div class="col-xs-12 form-group">
                 {!! Form::label('Tipo ') !!}
-                {!! Form::text('tipo_consulta', null, ['class'=>'form-control']) !!}
+                {!! Form::select('tipo_consulta', $tipos,null, ['class'=>'form-control']) !!}
               </div>
               <div class="col-xs-12 form-group">
                 {!! Form::label('Estado') !!}

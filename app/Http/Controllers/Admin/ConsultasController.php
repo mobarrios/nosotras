@@ -7,6 +7,7 @@ use App\Http\Repositories\Admin\ConsultasRepo as Repo;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Route;
 
+use App\Entities\Admin\ConsultasTipo;
 
 class ConsultasController extends Controller
 {
@@ -19,6 +20,8 @@ class ConsultasController extends Controller
 
         $this->section          = 'consultas';
         $this->data['section']  = $this->section;
+
+        $this->data['tipos'] = ConsultasTipo::lists('name','id');
 
     }
 
