@@ -68,6 +68,17 @@ class ApiController extends Controller
         return response()->json('true');
     }
 
+  public function getConsultas(Route $route)
+    {
+        $tipo = $route->getParameter('tipo');
+        
+        $con =  Consultas::all();
+        
+        return response()->json(['results'=>$con],200);
+    }
+
+
+
    //  public function getMesasByUsers(Route $route)
    //  {   
    //      //$res = User::with('Mesas')->with('Mesas.Escuelas')->with('Mesas.Escuelas.Operativos')->where('user_name', $route->getParameter('user_name'))->first();
