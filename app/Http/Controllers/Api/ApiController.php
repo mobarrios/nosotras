@@ -78,6 +78,14 @@ class ApiController extends Controller
     }
 
 
+  public function postLogin()
+  {
+        $res =  User::all();
+
+        return response()->json(['results'=>$res],200);
+  }
+
+
 
    //  public function getMesasByUsers(Route $route)
    //  {   

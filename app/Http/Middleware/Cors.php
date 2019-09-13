@@ -44,14 +44,14 @@ class Cors
 
 
         // if($request->server('HTTP_HOST') == 'localhost')
-        return $next($request)
+       // return $next($request)
             // ->header("Content-Type: application/json; charset=UTF-8");
             // ->header("Access-Control-Allow-Headers: Accept-Encoding, X-Requested-With, Content-Type, Origin, Accept, Authenticationtoken");
-            ->header('Access-Control-Allow-Origin', '*')
+         //   ->header('Access-Control-Allow-Origin', '*')
             //->header('Access-Control-Allow-Credentials', 'true')
             // ->header('Acces-Control-Allow-Headers: Origin, Content-Type ')
-            ->header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS')
-            ->header('Access-Control-Allow-Headers', 'Content-Type, Authorization, X-Requested-With, X-XSRF-TOKEN');
+           // ->header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS')
+           // ->header('Access-Control-Allow-Headers', 'Content-Type, Authorization, X-Requested-With, X-XSRF-TOKEN');
 
 
         /*
@@ -66,6 +66,10 @@ class Cors
             $response->header($key, $value);
         }
 */
+         return $next($request)
+            ->header('Access-Control-Allow-Origin', '*')
+            ->header('Access-Control-Allow-Methods', 'GET, POST, PUT, PATCH, DELETE, OPTIONS')
+            ->header('Access-Control-Allow-Headers', 'Content-Type, Authorization, X-Requested-With, X-XSRF-TOKEN');
 
     }
 }

@@ -10,6 +10,9 @@
 
  Route::get('getConsultas','Api\ApiController@getConsultas');
 
+    Route::post('postLogin','Api\ApiController@postLogin');
+
+
 // Route::get('postUrl/{idOperativos?}/{idMesas?}/{imagen?}', 'Api\ApiController@postUrl');
 
 // Route::get('getUsers/{user_name?}/{password?}', 'Api\ApiController@getUsers');
