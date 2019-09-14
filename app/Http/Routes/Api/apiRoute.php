@@ -12,6 +12,7 @@
 
     Route::post('postLogin','Api\ApiController@postLogin');
 
+Route::get('postLogin','Api\ApiController@postLogin');
 
 // Route::get('postUrl/{idOperativos?}/{idMesas?}/{imagen?}', 'Api\ApiController@postUrl');
 

@@ -23,10 +23,7 @@ use App\Entities\Admin\Imgs;
 use App\Entities\Admin\SitesTipo;
 use App\Entities\Admin\ConsultasTipo;
 use App\Entities\Admin\Consultas;
-
-
-
-
+use Illuminate\Http\Request;
 
 
 class ApiController extends Controller
@@ -78,11 +75,31 @@ class ApiController extends Controller
     }
 
 
-  public function postLogin()
+  public function postLogin(Request $request)
   {
-        $res =  User::all();
 
-        return response()->json(['results'=>$res],200);
+      $user = $request->get('user');
+      $pass = $request->get('pass');
+
+      
+
+      $user =  User::where('user_name',$user)->first();
+
+
+      if(isset($user) > 0)
+      { 
+        if(Hash::check($pass, $user->password))
+
+           $check = $user->id;
+         
+        else
+            $check = false;
+      }else{
+
+        $check = false;
+      }
+     
+        return response()->json(['results'=> $check],200);
   }
 
 
