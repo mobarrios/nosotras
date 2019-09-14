@@ -50,26 +50,31 @@ class ApiController extends Controller
         return response()->json(['results'=>$res],200);
     }
 
-    public function postConsulta(Route $route)
+    public function postConsulta(Route $route,Request $request)
     {
-        $tipo = $route->getParameter('tipo');
-        $text = $route->getParameter('text');
+        $tipo = $request->get('tipo');
+        $text = $request->get('text');
+        $user = $request->get('user_id');
+
 
 
         $con = new Consultas();
         $con->descripcion = $text;
         $con->tipo_consulta = $tipo;
+        $con->solicitud_user_id = $user;
+        $con->estado = 1;
         $con->save();
 
 
         return response()->json('true');
     }
 
-  public function getConsultas(Route $route)
+  public function getConsultas(Route $route, Request $request)
     {
         $tipo = $route->getParameter('tipo');
+        $user = $request->get('user_id');
         
-        $con =  Consultas::all();
+        $con =  Consultas::with('ConsultasTipo')->where('solicitud_user_id',$user)->get();
         
         return response()->json(['results'=>$con],200);
     }
@@ -77,11 +82,8 @@ class ApiController extends Controller
 
   public function postLogin(Request $request)
   {
-
       $user = $request->get('user');
       $pass = $request->get('pass');
-
-      
 
       $user =  User::where('user_name',$user)->first();
 
@@ -91,7 +93,7 @@ class ApiController extends Controller
         if(Hash::check($pass, $user->password))
 
            $check = $user->id;
-         
+
         else
             $check = false;
       }else{
