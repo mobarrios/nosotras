@@ -25,6 +25,9 @@ use App\Entities\Admin\ConsultasTipo;
 use App\Entities\Admin\Consultas;
 use Illuminate\Http\Request;
 
+use Mail;
+
+
 
 class ApiController extends Controller
 {
@@ -104,6 +107,52 @@ class ApiController extends Controller
         return response()->json(['results'=> $check],200);
   }
 
+
+  public function register(Request $request)
+  {
+
+      $name = $request->get('name');
+      $last_name = $request->get('last_name');
+      $pass = $request->get('pass');
+      $email = $request->get('email');
+
+      $u = new User();
+      $u->user_name = $email;
+      $u->name = $name;
+      $u->last_name = $last_name;
+      $u->email = $email;
+      $u->password = $pass;
+      $u->save();
+
+
+        Mail::send('confirm', ['id' => $u->id ], function ($m) use ($u) {
+            $m->from('nosotras@sysmo.com.ar', 'Nos.Otras');
+            $m->to($u->email, $u->name)->subject('Confirmación de la cuenta.');
+        });
+
+
+      return response()->json(['results' => true] ,200);
+  }
+
+ public function confirm(Route $route)
+  {
+
+      $id = $route->getParameter('id');
+     
+
+      $u =  User::find($id);
+      $u->confirmed = 1;
+      $u->save();
+
+
+        // Mail::send('confirm', ['user' => $u], function ($m) use ($u) {
+        //     $m->from('nosotras@sysmo.com.ar', 'Nos.Otras');
+        //     $m->to($u->email, $u->name)->subject('Confirmación de la cuenta.');
+        // });
+
+
+      return 'Confirmado!!';
+  }
 
 
    //  public function getMesasByUsers(Route $route)

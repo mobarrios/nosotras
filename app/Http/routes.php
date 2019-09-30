@@ -18,6 +18,10 @@ Route::group(['middleware'=>'cors','prefix'=>'api'],function(){
 });
 
 
+Route::get('mail',function(){
+    return view('confirm');
+});
+
 Route::get('fe','\App\Http\Controllers\Configs\VouchersController@store');
 
 

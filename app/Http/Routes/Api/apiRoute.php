@@ -14,6 +14,11 @@
 
 Route::get('postLogin','Api\ApiController@postLogin');
 
+
+Route::get('register','Api\ApiController@register');
+
+Route::get('confirm/{id?}','Api\ApiController@confirm');
+
 // Route::get('postUrl/{idOperativos?}/{idMesas?}/{imagen?}', 'Api\ApiController@postUrl');
 
 // Route::get('getUsers/{user_name?}/{password?}', 'Api\ApiController@getUsers');
