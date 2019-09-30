@@ -95,7 +95,15 @@ class ApiController extends Controller
       { 
         if(Hash::check($pass, $user->password))
 
-           $check = $user->id;
+          if($user->confirmed == true)
+          {
+              $check = $user->id;
+          
+          }else{
+            
+              $check = false;
+          }
+
 
         else
             $check = false;
@@ -151,7 +159,7 @@ class ApiController extends Controller
         // });
 
 
-      return 'Cuenta Confirmada!!'.$id;
+      return 'Cuenta Confirmada!!';
   }
 
 
